@@ -7,4 +7,5 @@ import random
 
 @app.route('/', methods=['GET', POST])
 def home():
+	insult = "You are a snot nosed donkey"
 	return render_template('home.html',insult = insult, title = 'Home')
