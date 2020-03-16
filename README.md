@@ -44,6 +44,8 @@ This service will also create an “Object” however this “Object” will be 
 
 ### Service #5
 
+This service will attach a meme to the insult which is generated.
+
 
 <a name="mysolution"></a>
 ### Solution
