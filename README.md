@@ -24,14 +24,31 @@
 <a name="brief"></a>
 ## The Product Brief
 
-To create:
-* LIST BRIEF HERE
+To create app using:
+* Software Development with Python
+* Continuous Integration
+* Cloud Fundamentals
+* Micro-service oriented architecture composed of at least 4 services that work together.
+
+### Service #1
+
+The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other 3 services, and finally for persisting some data in an SQL database.
+
+### Service #2 and #3
+
+These will both generate a random “Object”.
+
+### Service #4
+
+This service will also create an “Object” however this “Object” will be based upon the results of service #2 + #3.
+
+### Service #5
 
 
 <a name="mysolution"></a>
 ### Solution
 
-SOLUTION GOES HERE
+My project is a Insult Generator where two services will be used to generated random parts of a insult which will be sent as lists in JSON to the front-end service which is #Service 1 and will be joined together to form a complete insult and store it in a Mysql DB. Service 5 will be used to add a random meme to the generated response
 
 
 <a name="riskbacklog"></a>
