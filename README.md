@@ -42,7 +42,7 @@ As seen below I have created a MosCoW Prioritisation list where all the requirem
 I used a colour labelling method On Trello to make sure that each requirement had its own importance category.
 (Full Trello Board Later in the Document) (Click image for higher quality image)
 
-![MosCow](/images/sprint1) ![Labels](/images/labels.jpg)
+![MosCow](/images/sprint1.jpg) ![Labels](/images/labels.jpg)
 
 <a name="risktable"></a>
 ## Risk Assessment Table
@@ -55,20 +55,21 @@ I used a colour labelling method On Trello to make sure that each requirement ha
 The User Stories was also done on Trello, I listed all the use-cases for the product in the perspective of a user and a developer.
 (Click image for higher quality image) 
 
-![UserStories](/images/Userstories.jpg)
+![UserStories](/Images/userstories.jpg)
 
 <a name="spr1"></a>
-## Trello Board (Sprint 1)
+## MosCow Prioritisation and Product Backlog (Trello Board) (Sprint 1)
 
 Here is the First Sprint I did after defining the main requirements of the project. (Click image for higher quality image).
 
-![Trello Image](/images/sprint1.jpg)
+![Trello Image](/Images/sprint1.jpg)
+![Trello Image](/Images/labels.jpg)
 
 
 <a name="deploymentmethod"></a>
 ## Deployment
 
-![Deployment Pipeline](/images/pipeline.jpg)
+![Deployment Pipeline](/Images/pipeline.jpg)
 
 The Deployment pipeline for this Flask application was done using Git/Github for source control and automating that process using
 webhooks with Jenkins FINISH THIS HERE
