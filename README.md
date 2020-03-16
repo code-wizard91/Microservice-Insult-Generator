@@ -3,12 +3,12 @@
    * [My Solution](#mysolution)
    
 [Risk Assessment and Product Backlog](#riskbacklog)
-   * [Risk Assessment](#riskassess)
+   * [Risk Assessment](#spr1)
    * [Risk Assessment Table](#risktable)
    * [User Stories](#userstories)
 
-[Sprints & Planning](#spr1)
-   * [Trello Board Sprint 1.0](#spr1)
+[Sprints & Planning](#sprone)
+   * [Trello Board Sprint 1.0](#sprone)
      
 [My Deployment Method](#deploymentmethod)
    * [What I used](#techused)
@@ -36,18 +36,20 @@ SOLUTION GOES HERE
 
 <a name="riskbacklog"></a>
 ## Risk Assessment and Product Backlog
-# MosCoW Prioritization / Requirements / Product Backlog
 
-As seen below I have created a MosCoW Prioritisation list where all the requirements of the project are listed,
-I used a colour labelling method On Trello to make sure that each requirement had its own importance category.
-(Full Trello Board Later in the Document) (Click image for higher quality image)
 
-![MosCow](/images/sprint1.jpg) ![Labels](/images/labels.jpg)
+<a name="spr1"></a>
+## MosCow Prioritisation and Product Backlog (Trello Board) (Sprint 1)
+
+The first list you see is the product backlog, I prioritised the list depending on the MVP of the project, this was done using coloured labels which represent the priority of each task (See labels below)
+
+![Trello Image](/Images/sprint1.jpg)
+![Trello Image](/Images/labels.jpg)
 
 <a name="risktable"></a>
 ## Risk Assessment Table
-![Risk Assessment Table](/images/risktable1.jpg)
-![Risk Assessment Table Part 2](/images/risktable2.jpg)
+![Risk Assessment Table](/Images/risktable1.jpg)
+
 
 <a name="userstories"></a>
 ## User Stories (Users and Developers)
@@ -57,13 +59,13 @@ The User Stories was also done on Trello, I listed all the use-cases for the pro
 
 ![UserStories](/Images/userstories.jpg)
 
-<a name="spr1"></a>
+
+<a name="sprone"></a>
 ## MosCow Prioritisation and Product Backlog (Trello Board) (Sprint 1)
 
 Here is the First Sprint I did after defining the main requirements of the project. (Click image for higher quality image).
 
 ![Trello Image](/Images/sprint1.jpg)
-![Trello Image](/Images/labels.jpg)
 
 
 <a name="deploymentmethod"></a>
