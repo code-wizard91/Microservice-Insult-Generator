@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   frontend:
-    image: alimizan/insult-generator
+    image: alimizan/frontend
     deploy:
       replicas: 2
     container_name: frontend
@@ -13,47 +13,33 @@ services:
     - MYSQL_DB=${MYSQL_DB}
     - SECRET_KEY=${SECRET_KEY}
 
-  insult-service-one:
-    image: ansible-jenkins:5000/central-service:${BUILD_NUMBER}
+  insult-service-two:
+    image: alimizan/insultservicetwo
     deploy:
       replicas: 2
-    container_name: central
-    build: CentralServer
+    container_name: insultservicetwo
+    build: insult-sentance-generator-S-TWO/
 
-  country-service:
-    image: ansible-jenkins:5000/country-service:${BUILD_NUMBER}
+  insult-service-three:
+    image: alimizan/insultservicethree
     deploy:
       replicas: 2
-    container_name: country
-    build: CountryGenerator
+    container_name: insultservicethree
+    build: insult-word-generator-S-THREE/
 
-  account-service:
-    image: ansible-jenkins:5000/account-service:${BUILD_NUMBER}
+  insult-service-four:
+    image: alimizan/insultjoinerservicefour
     deploy:
       replicas: 3
-    container_name: account
-    build: AccountGenerator/
+    container_name: insultjoinerservicefour
+    build: insultjoiner-S-FOUR/
 
-  sort-service:
-    image: ansible-jenkins:5000/sort-service:${BUILD_NUMBER}
+  insult-service-five:
+    image: alimizan/insultjoinerservicefive
     deploy:
       replicas: 2
-    container_name: sort
-    build: SortGenerator/
-
-  cardnumber-service:
-    image: ansible-jenkins:5000/cardnumber-service:${BUILD_NUMBER}
-    deploy:
-      replicas: 2
-    container_name: cardnumber
-    build: CardNumberGenerator/
-
-  cvc-service:
-    image: ansible-jenkins:5000/cvc-service:${BUILD_NUMBER}
-    deploy:
-      replicas: 2
-    container_name: cvc
-    build: CVCGenerator/
+    container_name: insultjoinerservicefive
+    build: meme-generator-S-FIVE/
 
   nginx:
     image: nginx:latest
@@ -68,4 +54,4 @@ services:
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
     depends_on:
-      - frontend-service
+      - frontend
