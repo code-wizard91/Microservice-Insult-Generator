@@ -50,7 +50,7 @@ This service will attach a meme to the insult which is generated.
 <a name="mysolution"></a>
 ### Solution
 
-Service one of my project is essentially the front end where the insult that is gemerated will be shown to the user. Service 2 and 3 will be services that generate the random insult, service 4 puts them together and sends the complete insult to the front end. Service 5 will generate a random image and adds it under the insult.
+Service one of my project is essentially the front end where the insult that is gemerated will be shown to the user. Service 2 and 3 will be services that generate the random insult, service 4 is the back-end that puts them together and sends the complete insult to the front end, the insult is then stored inside a database. Service 5 will generate a random image and adds it under the insult.
 
 
 <a name="riskbacklog"></a>
