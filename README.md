@@ -40,7 +40,7 @@ These will both generate a random “Object”.
 
 ### Service #4
 
-This service will also create an “Object” however this “Object” will be based upon the results of service #2 + #3.
+This service will also create an “Object” using what is generated from service 2 and 3.
 
 ### Service #5
 
@@ -50,7 +50,7 @@ This service will attach a meme to the insult which is generated.
 <a name="mysolution"></a>
 ### Solution
 
-My project is a Insult Generator where two services will be used to generated random parts of a insult which will be sent as lists in JSON to the front-end service which is #Service 1 and will be joined together to form a complete insult and store it in a Mysql DB. Service 5 will be used to add a random meme to the generated response
+Service one of my project is essentially the front end where the insult that is gemerated will be shown to the user. Service 2 and 3 will be services that generate the random insult, service 4 puts them together and sends the complete insult to the front end. Service 5 will generate a random image and adds it under the insult.
 
 
 <a name="riskbacklog"></a>
