@@ -5,6 +5,8 @@ import requests
 import random
 
 
-@app.route('/insultword', methods=['POST'])
+@app.route('/insultword', methods=['GET'])
 def insultword():
-	return "This will be a insult word"
+	list = ['Crazy jumping parrot','Gobermouch','Silly Monkey','Blabbermouth','Snot Nosed Donkey','Bug Eating Neanderthal','Brainless Fossil','Corona infected lunatic zombie']
+	
+	return list[random.randrange(7)]
