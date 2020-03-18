@@ -7,6 +7,6 @@ import random
 
 @app.route('/', methods=['GET'])
 def home():
-	response = requests.get('https://example.api.com')
-	insult = "You are a snot nosed donkey"
+	response = requests.get('http://localhost:5003/specialinsult')
+	insult = response.text
 	return render_template('home.html',insult = insult, title = 'Home')

@@ -7,6 +7,9 @@ import random
 
 @app.route('/specialinsult', methods=['GET'])
 def specialinsult():
-	api = 'http://localhost:5001'
-	response = requests.get(api + '/insultsentance')
-	return response.text
+	response1 = requests.get('http://localhost:5001/insultsentance')
+	response2 = requests.get('http://localhost:5002/insultword')
+	response3 = response1.text+" "+response2.text
+	return response3
+
+
