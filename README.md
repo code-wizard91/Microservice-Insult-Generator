@@ -26,7 +26,7 @@
 
 To create app using:
 * Software Development with Python
-* Continuous Integration
+* CI/CD using Jenkins, Ansible pipeline
 * Cloud Fundamentals
 * Micro-service oriented architecture composed of at least 4 services that work together.
 
@@ -46,6 +46,9 @@ This service will also create an “Object” using what is generated from servi
 
 This service will attach a meme to the insult which is generated.
 
+### Anisble
+
+Ansible will be used to set up the environments for each remote vm, So the Jenkins Server VM, Nginx Reverse Proxy server VM, Docker Swarm Manger on a VM and finally the Docker Swarm Worker on a VM.
 
 <a name="mysolution"></a>
 ### Solution
