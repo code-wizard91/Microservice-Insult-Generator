@@ -8,6 +8,6 @@ import random
 @app.route('/insultsentance', methods=['GET'])
 def insultsentance():
 
-	list = ['You are a','Hey you absolute','You ugly long nosed','Your cat is a','How can you be such a monkey brained','You had to be such a mental','Why are you always a crazy','Why you insolent']
+	list = ['You are a really','Hey you are a','You are such a','You are surprisingly a','I do not understand how you can be such a','In life rarely we come across such a','Why are you always such a','You certainly are a','You are asss']
 	
 	return list[random.randrange(len(list))]

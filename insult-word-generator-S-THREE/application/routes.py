@@ -7,6 +7,5 @@ import random
 
 @app.route('/insultword', methods=['GET'])
 def insultword():
-	list = ['Crazy jumping parrot','Gobermouch','Silly Monkey','Blabbermouth','Snot Nosed Donkey','Bug Eating Neanderthal','Brainless Fossil','Corona infected lunatic zombie']
-	
-	return list[random.randrange(7)]
+	list = ['crazy jumping parrot', 'rubbish talking willy fizzle', 'silly Monkey', 'wide eyed corona infested bat', 'Snot Nosed Donkey brain', 'Bug Eating Neanderthal', 'Brainless Fossil', 'Corona infected lunatic zombie', 'insane baby faced snot nosed microphallus', 'empty brained dumbfounded ant eater']
+	return list[random.randrange(len(list))]
