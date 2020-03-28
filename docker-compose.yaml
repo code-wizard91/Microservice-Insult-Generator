@@ -2,6 +2,10 @@ version: "3.7"
 services:
   frontend:
     image: alimizan/frontend
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
     deploy:
       replicas: 2
     container_name: frontend
@@ -15,6 +19,10 @@ services:
 
   insult-service-two:
     image: alimizan/insultservicetwo
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
     deploy:
       replicas: 2
     container_name: insultservicetwo
@@ -22,6 +30,10 @@ services:
 
   insult-service-three:
     image: alimizan/insultservicethree
+    ports:
+    - target: 5002
+      published: 5002
+      protocol: tcp
     deploy:
       replicas: 2
     container_name: insultservicethree
@@ -29,6 +41,10 @@ services:
 
   insult-service-four:
     image: alimizan/insultjoinerservicefour
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
     deploy:
       replicas: 3
     container_name: insultjoinerservicefour
@@ -36,6 +52,10 @@ services:
 
   insult-service-five:
     image: alimizan/insultjoinerservicefive
+    ports:
+    - target: 5004
+      published: 5004
+      protocol: tcp
     deploy:
       replicas: 2
     container_name: insultjoinerservicefive
