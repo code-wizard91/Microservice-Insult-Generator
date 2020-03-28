@@ -40,18 +40,3 @@ services:
       replicas: 2
     container_name: insultjoinerservicefive
     build: meme-generator-S-FIVE/
-
-  nginx:
-    image: nginx:latest
-    deploy:
-      replicas: 2
-    container_name: nginx
-    ports:
-    - target: 80
-      published: 80
-    volumes:
-    - type: bind
-      source: ./nginx/nginx.conf
-      target: /etc/nginx/nginx.conf
-    depends_on:
-      - frontend
