@@ -18,7 +18,7 @@ services:
     - SECRET_KEY=${SECRET_KEY}
 
   insultservicetwo:
-    image: alimizan/insultservicetwo:v2
+    image: alimizan/insultservicetwo:${SERVICE_VERSION}
     ports:
     - target: 5001
       published: 5001
@@ -29,7 +29,7 @@ services:
     build: insult-sentance-generator-S-TWO/
 
   insultservicethree:
-    image: alimizan/insultservicethree:v2
+    image: alimizan/insultservicethree:${SERVICE_VERSION}
     ports:
     - target: 5002
       published: 5002
@@ -40,7 +40,7 @@ services:
     build: insult-word-generator-S-THREE/
 
   insultjoinerservicefour:
-    image: alimizan/insultjoinerservicefour:v2
+    image: alimizan/insultjoinerservicefour:${SERVICE_VERSION}
     ports:
     - target: 5003
       published: 5003
