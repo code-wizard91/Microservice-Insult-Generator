@@ -11,7 +11,7 @@ def specialinsult():
 	response1 = requests.get('http://insultservicetwo:5001/insultsentance')
 	response2 = requests.get('http://insultservicethree:5002/insultword')
 	response3 = response1.text+" "+response2.text
-	if len(response3) >= 40:
+	if len(response3) >= 90:
 		return "You are today's prize WINNER! as a reward you get a mind fuzzing brain teaser: " + brainteaser[random.randrange(len(brainteaser))]
 
 	return response3

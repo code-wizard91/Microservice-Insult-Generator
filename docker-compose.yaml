@@ -17,8 +17,8 @@ services:
     - MYSQL_DB=${MYSQL_DB}
     - SECRET_KEY=${SECRET_KEY}
 
-  insult-service-two:
-    image: alimizan/insultservicetwo
+  insultservicetwo:
+    image: alimizan/insultservicetwo:v2
     ports:
     - target: 5001
       published: 5001
@@ -28,8 +28,8 @@ services:
     container_name: insultservicetwo
     build: insult-sentance-generator-S-TWO/
 
-  insult-service-three:
-    image: alimizan/insultservicethree
+  insultservicethree:
+    image: alimizan/insultservicethree:v2
     ports:
     - target: 5002
       published: 5002
@@ -39,8 +39,8 @@ services:
     container_name: insultservicethree
     build: insult-word-generator-S-THREE/
 
-  insult-service-four:
-    image: alimizan/insultjoinerservicefour
+  insultjoinerservicefour:
+    image: alimizan/insultjoinerservicefour:v2
     ports:
     - target: 5003
       published: 5003
@@ -50,7 +50,7 @@ services:
     container_name: insultjoinerservicefour
     build: insultjoiner-S-FOUR/
 
-  insult-service-five:
+  insultjoinerservicefive:
     image: alimizan/insultjoinerservicefive
     ports:
     - target: 5004
