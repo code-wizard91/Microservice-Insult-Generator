@@ -15,6 +15,8 @@ pipeline{
                         export SERVICE_VERSION=${SERVICE_VERSION}
 			export DATABASE_URI=${DATABASE_URI}
 			export SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
+			git pull
+			sudo docker node ls
 			
 		'''
                 }
