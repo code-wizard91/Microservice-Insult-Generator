@@ -19,6 +19,7 @@ pipeline{
 			docker --version
 			docker node ls
 			cd insult-generator
+			echo ${SERVICE_VERSION}
 			docker stack deploy --compose-file docker-compose.yaml insultgenerator
 			
 			
