@@ -18,7 +18,7 @@ pipeline{
 			ls  -a
 			docker --version
 			sh sudo docker stack deploy --compose-file docker-compose.yaml insultgenerator
-			eof
+			
 		'''
                 }
             }
