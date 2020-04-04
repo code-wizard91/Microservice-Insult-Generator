@@ -5,6 +5,22 @@ pipeline{
 	    SERVICE_VERSION='v2'
 	}
         stages{
+	    
+	     stage('Set Env variables on worker node'){
+                steps{
+		    
+	            sh label: '', script: '''
+                        sshpass -p ${wvmpass} ssh -o StrictHostKeyChecking=no ${wvmuser}<<eof
+			pwd 
+                        export SECRET_KEY=${SECRET_KEY}
+                        export SERVICE_VERSION=${SERVICE_VERSION}
+			export DATABASE_URI=${DATABASE_URI}
+			export SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
+			
+		'''
+                }
+            } 
+	    	
             stage('Stack Deploy on Manager VM'){
                 steps{
 		    
