@@ -16,8 +16,7 @@ pipeline{
 			export DATABASE_URI=${DATABASE_URI}
 			export SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
 			ls  -a
-			sh su mizan
-			pwd
+			docker --version
 			
 		'''
                 }
