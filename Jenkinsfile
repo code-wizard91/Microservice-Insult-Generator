@@ -17,6 +17,7 @@ pipeline{
 			export SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
 			ls  -a
 			docker --version
+			docker stack deploy --compose-file docker-compose.yaml insultgenerator
 			
 		'''
                 }
