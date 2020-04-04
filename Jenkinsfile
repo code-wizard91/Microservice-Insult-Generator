@@ -18,7 +18,8 @@ pipeline{
 			ls  -a
 			docker --version
 			docker node ls
-			echo ${DATABASE_URI}
+			cd insultgenerator
+			docker stack deploy --compose-file docker-compose.yaml insultgenerator
 			
 			
 		'''
