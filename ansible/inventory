@@ -1,7 +1,7 @@
-[test]
+[swarm]
 51.132.177.20
 
-[test:vars]
+[swarm:vars]
 ansible_user=mizan
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ansible_ssh_private_key_file=~/.ssh/id_rsa

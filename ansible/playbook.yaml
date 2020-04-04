@@ -1,7 +1,7 @@
-- hosts: test
+- hosts: swarm
   become: true
   vars:
-    service: nginx
+    service: docker
   tasks:
   - name: Install "{{ service }}"
     apt:
