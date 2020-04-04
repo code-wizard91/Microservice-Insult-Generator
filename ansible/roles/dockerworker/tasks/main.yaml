@@ -1,0 +1,11 @@
+- name: leaving older swarm
+  become: yes
+  docker_swarm:
+    state: absent
+
+- name: join nodes to swarm
+  docker_swarm:
+    state: join
+    advertise_addr:
+    join_token: SWMTKN-1-313vh2asai3a7t78la6cjerl0w4pe4617k3laqw1959zprudri-bg7dwt12u2dtb5gn69xdo2jy3
+    remote_addrs: [ '10.0.0.4:2377' ]

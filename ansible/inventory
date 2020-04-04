@@ -1,8 +1,40 @@
-[test]
-51.132.177.20
+[jenkins]
+51.145.27.121
 
-[test:vars]
+[jenkins:vars]
 ansible_user=mizan
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 
+[swarm]
+52.151.100.171
+52.151.101.47
+
+[swarm:vars]
+ansible_user=mizan
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[managernode]
+52.151.100.171
+
+[managernode:vars]
+ansible_user=mizan
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[worker]
+52.151.101.47
+
+[worker:vars]
+ansible_user=mizan
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[nginx]
+51.132.11.147
+
+[nginx:vars]
+ansible_user=mizan
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/id_rsa

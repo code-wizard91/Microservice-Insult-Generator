@@ -1,0 +1,42 @@
+- name: gather facts
+  hosts: all
+
+- hosts: jenkins
+  become: true
+  roles:
+    - git
+    - geerlingguy.jenkins
+  tasks:
+  - name: configuring jenkins user
+    command: sudo usermod -aG sudo jenkins
+
+- name : Configuring docker and compose on manager and worker nodes     
+  hosts: swarm
+  roles:
+    - git
+    - docker
+  become: true
+  tasks:
+  - name: Adding Jenkins user to docker group
+    command: "{{item}}"
+    with_items:
+     - sudo adduser jenkins admin
+     - sudo usermod -aG docker jenkins
+
+- name : Configuring Manager
+  hosts: managernode
+  become: true
+  roles:
+  - dockermanager
+
+- name : Configuring Worker
+  hosts: worker
+  become: true
+  roles:
+  - dockerworker
+
+- name: Configure Nginx Reverse Proxy
+  hosts: nginx
+  become: true
+  roles:
+  - nginx

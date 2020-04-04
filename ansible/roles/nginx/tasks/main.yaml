@@ -1,0 +1,21 @@
+- name: ensure nginx is at the latest version
+  apt: name=nginx state=latest
+  become: yes
+
+- name: start nginx
+  service:
+      name: nginx
+      state: started
+  become: yes
+    
+- name: copy the nginx config file and restart nginx
+  copy:
+    src: /home/mizan/ansibletest/roles/nginx/tasks/nginx.conf
+    dest: /etc/nginx/nginx.conf
+  become: yes
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+  become: yes
