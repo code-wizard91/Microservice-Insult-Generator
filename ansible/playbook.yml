@@ -1,5 +1,10 @@
 - name: gather facts
   hosts: all
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400
 
 - hosts: jenkins
   become: true
@@ -9,6 +14,7 @@
   tasks:
   - name: configuring jenkins user
     command: sudo usermod -aG sudo jenkins
+    command: sudo apt-get install sshpass
 
 - name : Configuring docker and compose on manager and worker nodes     
   hosts: swarm

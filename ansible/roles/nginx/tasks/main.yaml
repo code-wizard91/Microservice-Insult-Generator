@@ -10,7 +10,11 @@
     
 - name: copy the nginx config file and restart nginx
   copy:
+<<<<<<< HEAD
     src: /home/mizan/ansibletest/roles/nginx/tasks/nginx.conf
+=======
+    src: /home/mizan/ansible/roles/nginx/tasks/nginx.conf
+>>>>>>> develop
     dest: /etc/nginx/nginx.conf
   become: yes
 
