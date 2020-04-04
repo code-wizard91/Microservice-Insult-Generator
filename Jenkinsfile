@@ -18,6 +18,7 @@ pipeline{
 			ls  -a
 			docker --version
 			docker node ls
+			echo ${DATABASE_URI}
 			
 			
 		'''
