@@ -1,0 +1,11 @@
+- name: update swarm
+  docker_swarm:
+    state: present
+    election_tick: 5
+
+- name: initialize swarm cluster
+  become: yes
+  command: docker swarm init
+  register: bootstrap_first_node
+  ignore_errors: yes
+  tags: [dockermanager]
