@@ -18,7 +18,7 @@ pipeline{
 			ls  -a
 			docker --version
 			docker node ls
-			cd insultgenerator
+			cd insult-generator
 			docker stack deploy --compose-file docker-compose.yaml insultgenerator
 			
 			
