@@ -7,10 +7,11 @@
    * [Risk Assessment Table](#risktable)
    * [User Stories](#userstories)
 
-[Sprints & Planning](#sprone)
-   * [Trello Board Sprint 1.0](#sprone)
+[Sprints & Planning](#spr1)
+   * [Trello Board Sprint 1.0](#spr1)
      
 [My Deployment Method](#deploymentmethod)
+   * [Jenkins CI/CD](#ci)
    * [What I used](#techused)
 
 [Visual Representation of my Solution](#visrep)
@@ -119,8 +120,6 @@ The User Stories was also done on Trello, I listed all the use-cases for the pro
 
 ![UserStories](/Images/sprint1.jpg)
 
-
-
 <a name="deploymentmethod"></a>
 ## Deployment
 
@@ -128,6 +127,15 @@ The User Stories was also done on Trello, I listed all the use-cases for the pro
 
 The Deployment pipeline for this Flask application was done using Git/Github for source control and automating that process using
 webhooks with Jenkins FINISH THIS HERE
+
+<a name="ci"></a>
+## Jenkins CI Server
+
+Jenkins was used to securely ssh into the deployment VM's which are running the Docker Swarm Manger node and the worker node to deploy the app and set key environment variables, I created a Jenkinsfile to define the deployment pipeline which is on my github repository,
+Ansible was used to setup the CI server thus automating the entire process. See below for a more in-depth look.
+
+![Jenkinsfile](/images/jenkinsfile.jpg)
+
 
 ## How the process looks
 
