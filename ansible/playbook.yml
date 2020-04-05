@@ -1,10 +1,9 @@
-- name: gather facts
+- name: Update all packages  
   hosts: all
   become: true
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 86400
+  tasks:
+  - name: updating packages
+    command: sudo apt-get update -y
 
 - hosts: jenkins
   become: true
@@ -14,6 +13,11 @@
   tasks:
   - name: configuring jenkins user
     command: sudo usermod -aG sudo jenkins
+  
+- hosts: jenkins    
+  become: true
+  tasks:
+  - name: Installing SSHPASS  
     command: sudo apt-get install sshpass
 
 - name : Configuring docker and compose on manager and worker nodes     
