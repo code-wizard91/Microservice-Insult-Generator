@@ -96,7 +96,7 @@ As you can see I successfully completed all the tasks listed on my first sprint 
 
 ## Sprint 2
 
-Here is my second Sprint where I aimed to complete a lot of the tasks that I thought would take a long time due to the complexity of the automation I was
+Here is my second Sprint where I aimed to complete a lot of the tasks that I thought would take a long time due to the complexity of the automation I was trying to achieve using Ansible and Jenkins. I also found Nginx hard to conceptualise as reverse proxies are a new concept to me. I also finished the alternating service that can be easily switched by changing the version number in my Jenkinsfile on Github, this change will be detected by my Jenkins server and will update all the services running on the Swarm Automatically. 
 
 ![Trello Image](/Images/sprint2.jpg)
 
