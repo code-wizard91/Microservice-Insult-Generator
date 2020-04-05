@@ -10,7 +10,7 @@
     
 - name: copy the nginx config file and restart nginx
   copy:
-    src: /home/mizan/ansible/roles/nginx/tasks/nginx.conf
+    src: /home/mizan/insult-generator/ansible/roles/nginx/tasks/nginx.conf
     dest: /etc/nginx/nginx.conf
   become: yes
 
