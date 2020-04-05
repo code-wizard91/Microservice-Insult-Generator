@@ -26,8 +26,13 @@
 
 To create app using:
 * Software Development with Python
-* CI/CD using Jenkins, Ansible pipeline
-* Cloud Fundamentals
+* CI/CD using Jenkins, Ansible pipeline (Seperate Cloud Services)
+* Nginx as reverse proxy
+* Managed MySQL database on the cloud
+* Docker and Orchestration using Docker-Swarm, Split app into micro-services in the cloud with built in redundancies such as Load-Balancing behind Nginx.
+* Use Ansible to set up all VM's (Installing Dependencies and applications)
+* Use Jenkins to set up multiple stages in the pipeline; Staging, Testing, Building and Deployment
+* Implement Cloud Fundamentals such as test driven development, Continuous Integration and deployment, and a SCRUM based methodology 
 * Micro-service oriented architecture composed of at least 4 services that work together.
 
 ### Service #1
