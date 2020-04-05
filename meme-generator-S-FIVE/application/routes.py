@@ -14,5 +14,7 @@ def meme():
     }
 
     response = requests.request("GET", url, headers=headers)
+    res=response.json()
+    textres = str(res["content"])
 
-    return response
+    return textres
