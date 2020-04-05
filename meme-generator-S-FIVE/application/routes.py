@@ -5,6 +5,16 @@ import requests
 import random
 
 
-@app.route('/meme', methods=['POST'])
+@app.route('/meme', methods=['GET'])
 def meme():
-	return "This will be a meme"
+    url = "https://joke3.p.rapidapi.com/v1/joke"
+    headers = {
+        'x-rapidapi-host': "joke3.p.rapidapi.com",
+        'x-rapidapi-key': "e6adf9892amsh8b30e72a8871cf6p14c10djsna97888a775b9"
+    }
+
+    response = requests.request("GET", url, headers=headers)
+    res=response.json()
+    textres = str(res["content"])
+
+    return textres

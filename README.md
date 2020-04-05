@@ -26,35 +26,50 @@
 
 To create app using:
 * Software Development with Python
-* CI/CD using Jenkins, Ansible pipeline
-* Cloud Fundamentals
-* Micro-service oriented architecture composed of at least 4 services that work together.
+* CI/CD using Jenkins, Ansible pipeline (Seperate Cloud Services)
+* Nginx as reverse proxy
+* Managed MySQL database on the cloud
+* Docker and Orchestration using Docker-Swarm, Split app into micro-services in the cloud with built in redundancies such as Load-Balancing behind Nginx. (One Manager node, One Worker Node in Swarm)
+* Use Ansible to set up all VM's (Installing Dependencies and applications) using Playbook
+* Use Jenkins to set up multiple stages in the pipeline; Staging, Testing, Building and Deployment and implement a Git Webhook as a
+trigger
+* Implement Cloud Fundamentals such as test driven development, Continuous Integration and deployment, and a SCRUM based methodology 
+* Micro-service oriented architecture composed of at least 4 services that work together and services 2,3,4 should be easily interchangeable using versioning on Dockerhub.
 
 ### Service #1
 
-The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other 3 services, and finally for persisting some data in an SQL database.
+The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database.
 
 ### Service #2 and #3
 
-These will both generate a random “Object”.
+These will both generate a random “Object”. The first object generated is a random beggining of a insulting sentance, the second object
+is a randomly generated insult
 
 ### Service #4
 
-This service will also create an “Object” using what is generated from service 2 and 3.
+This service will also create an “Object” using what is generated from service 2 and 3. Essentially this service brings together the responses from service 2 and 3.
 
 ### Service #5
 
-This service will attach a meme to the insult which is generated.
+This service will attach a joke to the insult which is generated.
 
 ### Anisble
 
-Ansible will be used to set up the environments for each remote vm, So the Jenkins Server VM, Nginx Reverse Proxy server VM, Docker Swarm Manger on a VM and finally the Docker Swarm Worker on a VM.
+Ansible will be used to set up the environments for each remote vm, So this means installing and configuring docker, docker-compose, adding required users and configuring access for Jenkins on the Manager node and Worker node, Setting up Jenkins VM auto generating access and SSH keys, Ansible was also used to setup the Nginx Reverse Proxy server (VM) copy my configured nginx config to the remote host and resart the server allowing me to load balance all my services through an Nginx server thus decreasing redundancy.
 
 <a name="mysolution"></a>
 ### Solution
 
-Service one of my project is essentially the front end where the insult that is gemerated will be shown to the user. Service 2 and 3 will be services that generate the random insult, service 4 is the back-end that puts them together and sends the complete insult to the front end, the insult is then stored inside a database. Service 5 will generate a random image and adds it under the insult.
+I decided to create a Random Insult & Joke Generator with a Microservice architecture, My application will have 5 services not including Jenkins, Managed MYSQL db, Nginx server, Ansible Server.
 
+- Service 1 of my project is essentially the front-end where the insult that is gemerated will be shown to the user.
+- Service 2 and 3 will be services that generate the random insult.
+- Service 4 is the back-end that puts them together and sends the complete insult to the front end, the insult is then stored inside a     database. 
+- Service 5 will connect to an external API hosted by rapidapi.com that generates a random joke, it will then perform some logic to       convert the json into text and send the response as plain text for the front-end to use.
+
+- I will be using Ansible as a way to stage all my environments and prepare them to run my services.
+- I will use Jenkins to build a testing and deployment pipeline using Jenkinsfile that will be triggered using Git/Github webhook
+- Nginx will be used as a Reverse Proxy to load balance all my services running on Docker Swarm
 
 <a name="riskbacklog"></a>
 ## Risk Assessment and Product Backlog
