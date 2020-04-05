@@ -50,7 +50,6 @@ is a randomly generated insult
 This service will also create an “Object” using what is generated from service 2 and 3. Essentially this service brings together the responses from service 2 and 3.
 
 ### Service #5
-
 This service will attach a joke to the insult which is generated.
 
 ### Anisble
@@ -82,6 +81,24 @@ The first list you see is the product backlog, I prioritised the list depending 
 
 ![Trello Image](/Images/sprint1.jpg)
 ![Trello Image](/Images/labels.jpg)
+
+## Sprint 1 (Cont..)
+
+![Trello Image](/Images/sprint1.1.jpg)
+
+## Sprint 1 ( COMPLETED )
+
+![Trello Image](/Images/sprint1.2.jpg)
+
+## Sprint 2
+
+![Trello Image](/Images/sprint2.jpg)
+
+## Sprint 2 ( COMPLETED )
+
+![Trello Image](/Images/sprint2.1.jpg)
+
+![Trello Image](/Images/sprint3.jpg)
 
 <a name="risktable"></a>
 ## Risk Assessment Table
