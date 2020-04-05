@@ -84,13 +84,19 @@ The first list you see is the product backlog, I prioritised the list depending 
 
 ## Sprint 1 (Cont..)
 
+Below I started on the tasks that would get me the Minimum Viable Product, I Created all the main services and made sure all the endpoints for each service was working, I then moved onto creating the docker-compose file that I would use to create and test my app on a Docker Swarm, I also connected a Managed Mysql DB to the front-end service to persist the random insults. Before doing all this I made sure to create a develop branch on my Github repository that I merged with the Master branch at the end.
+
 ![Trello Image](/Images/sprint1.1.jpg)
 
 ## Sprint 1 ( COMPLETED )
 
+As you can see I successfully completed all the tasks listed on my first sprint and moved them over to my done list on my Kanban Board.
+
 ![Trello Image](/Images/sprint1.2.jpg)
 
 ## Sprint 2
+
+Here is my second Sprint where I aimed to complete a lot of the tasks that I thought would take a long time due to the complexity of the automation I was
 
 ![Trello Image](/Images/sprint2.jpg)
 
