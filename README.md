@@ -117,15 +117,8 @@ Here is my second Sprint where I aimed to complete a lot of the tasks that I tho
 The User Stories was also done on Trello, I listed all the use-cases for the product in the perspective of a user and a developer.
 (Click image for higher quality image) 
 
-![UserStories](/Images/userstories.jpg)
+![UserStories](/Images/sprint1.jpg)
 
-
-<a name="sprone"></a>
-## MosCow Prioritisation and Product Backlog (Trello Board) (Sprint 1)
-
-Here is the First Sprint I did after defining the main requirements of the project. (Click image for higher quality image).
-
-![Trello Image](/Images/sprint1.jpg)
 
 
 <a name="deploymentmethod"></a>
