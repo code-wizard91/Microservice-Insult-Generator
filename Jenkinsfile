@@ -35,6 +35,7 @@ pipeline{
 			docker --version
 			docker node ls
 			cd insult-generator
+			git pull
 			echo Deploying ${SERVICE_VERSION}
 			docker stack deploy --compose-file docker-compose.yaml insultgenerator
 			
