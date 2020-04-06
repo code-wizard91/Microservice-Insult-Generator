@@ -13,6 +13,7 @@
 [My Deployment Method](#deploymentmethod)
    * [Jenkins CI/CD Server](#ci)
    * [Ansible Server](#ans)
+   * [Docker Swarm](#dswarm)
    * [What I used](#techused)
 
 [Visual Representation of my Solution](#visrep)
@@ -146,21 +147,33 @@ I set up my Ansible by creating specific roles that would be executed on each VM
 
 ![Ansible](/Images/ansible.jpg)
 
-As you can see in the folder structure I have a directory called roles, inside this directory I have multiple roles that contain specific configurations (See below)
+As you can see in the folder structure I have a directory called roles, inside this directory I have multiple roles that contain specific configurations etc. Docker for installing Docker and Compose, Dockermanager and Dockerworker sets up my Node's for Docker Swarm, Jenkins for setting up my Jenkins Server, Git for setting up and installing Git and Nginx to set up my reverse proxy load balancer.
+
+(See below)
 
 ![Ansible roles](/Images/ansible2.jpg)
 
-The docker directory contains the inventory file which holds all the VM IP's that ansible will run on, also the Playbook file which ansible references when installing dependancies, this essentially holds each task that Ansible will run. Inside the roles folder I defined each role depending on the specific task it would perform(docker role installs docker, Nginx installs Nginx, inside each role folder is a "main.yaml" that holds all the configurations for each role.  
+The docker directory contains the inventory file which holds all the VM IP's that ansible will run on, also the Playbook file which ansible references when installing dependancies, this essentially holds each task that Ansible will run. Inside the roles folder I defined each role depending on the specific task it would perform (docker role installs docker, Nginx installs Nginx) inside each role folder is a "main.yaml" that holds all the configurations for each role.  
 
 ## Inventory File
 
-![Ansible roles](/Images/ansible4.jpg)
+For the inventory file I created host groups depending on the task that they perform, this makes it easier to reference in the Playbook file, each section has the VM Ip's that Ansible will access and variables Ansible will use when accessing a remote host.
 
+![Ansible roles](/Images/ansible4.jpg)
 
 ## Playbook file
 
+The Playbook File has services and tasks that Ansible needs to perform on each host. Below you can see how I reference the Roles I created before, ansible will run each role in the remote host. 
+
 ![Ansible roles](/Images/ansible3.jpg)
 
+
+<a name="dswarm"></a>
+## Docker-Swarm
+
+To split my app into micro-services I created docker
+
+![Ansible roles](/Images/dockercompose.jpg)
 
 
 ## How the process looks
