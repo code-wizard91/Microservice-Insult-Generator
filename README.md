@@ -1,6 +1,7 @@
 ## Index
 [Brief](#brief)
    * [My Solution](#mysolution)
+   * [Services](#myservices)
    
 [Risk Assessment and Product Backlog](#riskbacklog)
    * [Risk Assessment](#spr1)
@@ -39,30 +40,6 @@ trigger
 * Implement Cloud Fundamentals such as test driven development, Continuous Integration and deployment, and a SCRUM based methodology 
 * Micro-service oriented architecture composed of at least 4 services that work together and services 2,3,4 should be easily interchangeable using versioning on Dockerhub.
 
-### Service #1
-
-The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database. Each service is its own Flask Application and has its own directory and files (See Below)
-
-![Files and folders](/Images/structure1.jpg)
-![Front end structure](/Images/structure3.jpg)
-
-
-### Service #2 and #3
-
-These will both generate a random “Object”. The first object generated is a random beggining of a insulting sentance, the second object
-is a randomly generated insult
-
-### Service #4
-
-This service will also create an “Object” using what is generated from service 2 and 3. Essentially this service brings together the responses from service 2 and 3.
-
-### Service #5
-This service will attach a joke to the insult which is generated.
-
-### Anisble
-
-Ansible will be used to set up the environments for each remote vm, So this means installing and configuring docker, docker-compose, adding required users and configuring access for Jenkins on the Manager node and Worker node, Setting up Jenkins VM auto generating access and SSH keys, Ansible was also used to setup the Nginx Reverse Proxy server (VM) copy my configured nginx config to the remote host and resart the server allowing me to load balance all my services through an Nginx server thus decreasing redundancy.
-
 <a name="mysolution"></a>
 ### Solution
 
@@ -72,10 +49,73 @@ I decided to create a Random Insult & Joke Generator with a Microservice archite
 - Service 2 and 3 will be services that generate the random insult.
 - Service 4 is the back-end that puts them together and sends the complete insult to the front end, the insult is then stored inside a     database. 
 - Service 5 will connect to an external API hosted by rapidapi.com that generates a random joke, it will then perform some logic to       convert the json into text and send the response as plain text for the front-end to use.
-
+- Service 2,3,4 can be changed to V2 so it returns a greeting and a compliment instead of an insult, also if a special parameter is met   within the logic of service 4 the user gets a surprise brain teaser
 - I will be using Ansible as a way to stage all my environments and prepare them to run my services.
 - I will use Jenkins to build a testing and deployment pipeline using Jenkinsfile that will be triggered using Git/Github webhook
 - Nginx will be used as a Reverse Proxy to load balance all my services running on Docker Swarm
+
+
+<a name="myservices"></a>
+## My Micro-service architecture
+
+### Service #1
+
+The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database. Each service is its own Flask Application and has its own directory and files (See Below)
+
+![Files and folders](/Images/structure1.jpg)
+![Front end structure](/Images/structure3.jpg)
+
+Here is how the front end looks when recieving requests from other services.
+
+![f-look](/Images/service1.jpg)
+
+### Service #2 and #3
+
+These will both generate a random “Object”. The first object generated is a random beggining of a insulting sentance, the second object
+is a randomly generated insult
+
+Below is the V1 version of service 2
+
+![s2](/Images/service2.jpg)
+
+Below is the alternate v2 version of service 2
+
+![s2v2](/Images/service2v2.jpg)
+
+
+Below is the V1 version of service 3
+
+![s3](/Images/service3.jpg)
+
+Below is the alternate v2 version of service 3
+
+![s3v2](/Images/service3v2.jpg)
+
+
+### Service #4
+
+This service will also create an “Object” using what is generated from service 2 and 3. Essentially this service brings together the responses from service 2 and 3.
+
+Below is the V1 version of service 4
+
+![s4](/Images/service4.jpg)
+
+Below is the alternate v2 version of service 4
+
+![s4v2](/Images/service4v2.jpg)
+
+### Service #5
+
+This service will attach a joke to the insult which is generated.
+
+Below is service 5 it generates request using an external API
+
+![s5](/Images/service5.jpg)
+
+
+### Anisble
+
+Ansible will be used to set up the environments for each remote vm, So this means installing and configuring docker, docker-compose, adding required users and configuring access for Jenkins on the Manager node and Worker node, Setting up Jenkins VM auto generating access and SSH keys, Ansible was also used to setup the Nginx Reverse Proxy server (VM) copy my configured nginx config to the remote host and resart the server allowing me to load balance all my services through an Nginx server thus decreasing redundancy.
 
 <a name="riskbacklog"></a>
 ## Risk Assessment and Product Backlog
