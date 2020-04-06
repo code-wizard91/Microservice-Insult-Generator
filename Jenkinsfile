@@ -5,8 +5,9 @@ pipeline{
 	    SERVICE_VERSION='v1'
 	}
 	
-	
-	stage('Ansible is Setting up Jenkins-VM, Nginx-VM, Installing Docker and Dockerswarm, on Manager and Worker Nodes '){
+	stages{
+		
+	     stage('Ansible is Setting up Jenkins-VM, Nginx-VM, Installing Docker and Dockerswarm, on Manager and Worker Nodes '){
                 steps{
 		    
 	            sh label: '', script: '''
@@ -19,7 +20,6 @@ pipeline{
                 }
             }
 	
-        stages{
 	    
 	     stage('Set Env variables on worker node'){
                 steps{
