@@ -11,7 +11,7 @@
 [Sprints & Planning](#spr1)
    * [Trello Board Sprints](#spr1)
      
-[My Deployment Method](#deploymentmethod)
+[Deployment Method](#deploymentmethod)
    * [Jenkins CI/CD Server](#ci)
    * [Ansible Server](#ans)
    * [Docker Swarm](#dswarm)
@@ -164,7 +164,7 @@ The User Stories was also done on Trello, I listed all the use-cases for the pro
 ![UserStories](/Images/sprint1.jpg)
 
 <a name="deploymentmethod"></a>
-## Deployment
+## Deployment Methodology
 
 ![Deployment Pipeline](/Images/pipeline.jpg)
 
