@@ -134,7 +134,8 @@ webhooks with Jenkins FINISH THIS HERE
 Jenkins was used to securely ssh into the deployment VM's which are running the Docker Swarm Manger node and the worker node to deploy the app and set key environment variables, I created a Jenkinsfile to define the deployment pipeline which is on my github repository,
 Ansible was used to setup the CI server thus automating the entire process. See below for a more in-depth look.
 
-![Jenkinsfile](/images/jenkinsfile.jpg)
+![Jenkinsfile](/Images/jenkinsfile.jpg)
+
 
 
 ## How the process looks
