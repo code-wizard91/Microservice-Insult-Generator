@@ -131,8 +131,9 @@ The User Stories was also done on Trello, I listed all the use-cases for the pro
 
 ![Deployment Pipeline](/Images/pipeline.jpg)
 
-The Deployment pipeline for this Flask application was done using Git/Github for source control and automating that process using
-webhooks with Jenkins FINISH THIS HERE
+The Deployment pipeline starts with setting up the VM environments using Ansible, a Github trigger on commit will start the test and build process within Jenkins, Jenkins will then deploy the Swarm and nodes to the cloud, Data will also be persisted in a managed MYSQL database, Nginx will Load Balance all traffic coming in across the nodes. Below is an image of all the VM's and resources on Microsoft Azure.
+
+![VM](/Images/vms.jpg)
 
 <a name="ci"></a>
 ## Jenkins CI Server
