@@ -195,8 +195,8 @@ Here is an image of Ansible running its Plays.
 To split my app into micro-services I created Docker Images of each service and uploaded each version to Dockerhub, this enables me to switch versions very easily, I used each of these images in the compose file below, I then used these images and Docker-Compose to create a Docker Swarm of containers to increase my apps resiliance and reduce down-time and possible redundancies. 
 
 Below is an image of a Dockerfile I used to create my images.
-![Dockerfile](/Images/structure2.jpg)
 
+![Dockerfile](/Images/structure2.jpg)
 
 In the compose file I defined how many replicas of the service I want running in the Swarm
 
