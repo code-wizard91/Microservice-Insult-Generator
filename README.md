@@ -253,7 +253,7 @@ Heres the coverage report Generated and the testing file, Note: I only tested my
 
 Heres the test running before deployment on Jenkins
 
-![test](/Images/test2.jpg)
+![test](/Images/test3.jpg)
 
 
 <a name="techused"></a>
