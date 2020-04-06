@@ -251,6 +251,11 @@ Heres the coverage report Generated and the testing file, Note: I only tested my
 
 ![test](/Images/test1.jpg)
 
+Heres the test running before deployment on Jenkins
+
+![test](/Images/test2.jpg)
+
+
 <a name="techused"></a>
 ### List of Technologies Used
 
