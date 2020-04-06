@@ -45,7 +45,7 @@ trigger
 
 I decided to create a Random Insult & Joke Generator with a Microservice architecture, My application will have 5 services not including Jenkins, Managed MYSQL db, Nginx server, Ansible Server and Docker Swarm
 
-- Service 1 of my project is essentially the front-end where the insult that is gemerated will be shown to the user.
+- Service 1 of my project is essentially the front-end where the insult that is generated will be shown to the user.
 - Service 2 and 3 will be services that generate the random insult.
 - Service 4 is the back-end that puts them together and sends the complete insult to the front end, the insult is then stored inside a     database. 
 - Service 5 will connect to an external API hosted by rapidapi.com that generates a random joke, it will then perform some logic to       convert the json into text and send the response as plain text for the front-end to use.
@@ -81,7 +81,6 @@ Below is the V1 version of service 2
 Below is the alternate v2 version of service 2
 
 ![s2v2](/Images/service2v2.jpg)
-
 
 Below is the V1 version of service 3
 
@@ -261,13 +260,19 @@ In the compose file I defined how many replicas of the service I want running in
 <a name="visrep"></a>
 ## Visual Representation of App
 
+As you can see the app is working and generating random insults using a micro-service architecture and with multiple backend services to steamline deployment and manage server load and redundancies
 
+![Visual Rep](/Images/visrep.jpg)
 
 
 <a name="eval"></a>
 ## Retrospect
 
-Eval will go here
+Whilst working on this project I learnt a lot about all the different services and technologies that I used, I really enjoyed using Ansible to provision my VM environments and really enjoyed using Docker-Swarm to scale my application, Overcoming hurdles was one of situations I found myself in as I had to research and learn every step of the way, But this was the main reason I learnt so much and finished this project.
+
+Looking back I would start my testing from the beggining of the project as testing is one of my weaknesses that I need to improve, I also need to use the people around me when I am stuck with something as some of the issues were very small and easy to fix.
+
+Finally I would definately recommend using these technologies as automation is the future and a very exciting one indeed.
 
 
 <a name="authorsinv"></a>
@@ -278,4 +283,4 @@ Mahboob Ali
 <a name="acknowledgements"></a>
 ## Acknowledgements
 
-* Jay Grindrod
+* Jay Grindrod - Thank you for all your help, and putting up with all my random questions, You are a true mentor and someone that is amazing at relaying information and knownledge, I will honestly miss your coding sessions and of course the football banter! 
