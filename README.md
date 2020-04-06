@@ -180,9 +180,16 @@ The Playbook File has services and tasks that Ansible needs to perform on each h
 
 To split my app into micro-services I created Docker Images of each service and uploaded each version to Dockerhub, this enables me to switch versions very easily, I used each of these images in the compose file below, I then used these images and Docker-Compose to create a Docker Swarm of containers to increase my apps resiliance and reduce down-time and possible redundancies. 
 
-In the compose file I defined how many replicas of the service I want running.
+In the compose file I defined how many replicas of the service I want running in the Swarm
 
 ![Docker Compose](/Images/dockercompose.jpg)
+
+Below is an image of the swarm running on both the manager and the worker nodes.
+
+![Running Swarm](/Images/swarmrunning.jpg)
+
+
+
 
 ## How the process looks
 
