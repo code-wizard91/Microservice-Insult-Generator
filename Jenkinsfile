@@ -7,20 +7,6 @@ pipeline{
 	
 	stages{
 		
-	     stage('Ansible is Setting up Jenkins-VM, Nginx-VM, Installing Docker and Dockerswarm, on Manager and Worker Nodes '){
-                steps{
-		    
-	            sh label: '', script: '''
-                        sshpass -p ${wvmpass} ssh -o StrictHostKeyChecking=no ${ansibleuser}<<eof
-			pwd 
-                        cd ansible
-			ansible-playbook -i inventory playbook.yml
-			
-		'''
-                }
-            }
-	
-	    
 	     stage('Set Env variables on worker node'){
                 steps{
 		    
