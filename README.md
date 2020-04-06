@@ -60,7 +60,7 @@ I decided to create a Random Insult & Joke Generator with a Microservice archite
 
 ### Service #1
 
-The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database. Each service is its own Flask Application and has its own directory and files (See Below)
+The core service – this will render the Jinja2 templates to interact with the application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database. Each service is its own Flask Application and has its own directory and files (See Below)
 
 ![Files and folders](/Images/structure1.jpg)
 ![Front end structure](/Images/structure3.jpg)
