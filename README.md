@@ -177,6 +177,12 @@ The Deployment pipeline starts with setting up the VM environments using Ansible
 
 Jenkins was used to securely ssh into the deployment VM's which are running the Docker Swarm Manger node and the worker node to deploy the app and set key environment variables.
 
+Before the app is deployed the app must pass the test (See Below) if the tests pass the build will continue.
+
+Heres the test running before deployment on Jenkins
+
+![testjenk](/Images/test3.jpg)
+
 I created a Jenkinsfile to define each stage of the deployment, this file is read by the Jenkins server and used to deploy the app.
 
 Ansible was used to setup the Jenkins CI server thus automating the entire process. 
@@ -184,6 +190,7 @@ Ansible was used to setup the Jenkins CI server thus automating the entire proce
 The version of the app can be changed from v1 to v2 using the SERVICE_VERSION variable and this will change how the application works. 
 
 Environment Variables were stored inside the Jenkins CI server as global variables so I could then reference them within my Jenkinsfile. See below for a more in-depth look.
+
 
 ![Jenkinsfile](/Images/jenk.jpg)
 
