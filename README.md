@@ -11,7 +11,8 @@
    * [Trello Board Sprint 1.0](#spr1)
      
 [My Deployment Method](#deploymentmethod)
-   * [Jenkins CI/CD](#ci)
+   * [Jenkins CI/CD Server](#ci)
+   * [Ansible Server](#ans)
    * [What I used](#techused)
 
 [Visual Representation of my Solution](#visrep)
@@ -132,9 +133,33 @@ webhooks with Jenkins FINISH THIS HERE
 ## Jenkins CI Server
 
 Jenkins was used to securely ssh into the deployment VM's which are running the Docker Swarm Manger node and the worker node to deploy the app and set key environment variables, I created a Jenkinsfile to define the deployment pipeline which is on my github repository,
-Ansible was used to setup the CI server thus automating the entire process. See below for a more in-depth look.
+Ansible was used to setup the CI server thus automating the entire process. See below for a more in-depth look. Environment Variables were stored inside the Jenkins CI server as global variables so I could then reference them within my Jenkinsfile
 
-![Jenkinsfile](/Images/jenkinsfile.jpg)
+![Jenkinsfile](/Images/jenk.jpg)
+
+<a name="ans"></a>
+## Ansible Software Provisioning and Config Management
+
+Ansible is a very useful tool as it allowed me to set up all my cloud VM's with the Packages and Softwares that my App and services need to run, this includes; installing Jenkins and setting up my user automatically, Installing and fully configuring my Nginx Load Balancing server, Installing Docker and Docker-Compose on my manager and worker vm to use with Docker Swarm. 
+
+I set up my Ansible by creating specific roles that would be executed on each VM, roles are important as they allow you to reuse configurations on multiple hosts (SEE BELOW)
+
+![Ansible](/Images/ansible.jpg)
+
+As you can see in the folder structure I have a directory called roles, inside this directory I have multiple roles that contain specific configurations (See below)
+
+![Ansible roles](/Images/ansible2.jpg)
+
+The docker directory contains the inventory file which holds all the VM IP's that ansible will run on, also the Playbook file which ansible references when installing dependancies, this essentially holds each task that Ansible will run. Inside the roles folder I defined each role depending on the specific task it would perform(docker role installs docker, Nginx installs Nginx, inside each role folder is a "main.yaml" that holds all the configurations for each role.  
+
+## Inventory File
+
+![Ansible roles](/Images/ansible4.jpg)
+
+
+## Playbook file
+
+![Ansible roles](/Images/ansible3.jpg)
 
 
 
