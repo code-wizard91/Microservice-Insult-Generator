@@ -9,7 +9,7 @@
    * [User Stories](#userstories)
 
 [Sprints & Planning](#spr1)
-   * [Trello Board Sprint 1.0](#spr1)
+   * [Trello Board Sprints](#spr1)
      
 [My Deployment Method](#deploymentmethod)
    * [Jenkins CI/CD Server](#ci)
@@ -112,10 +112,6 @@ Below is service 5 it generates request using an external API
 
 ![s5](/Images/service5.jpg)
 
-
-### Anisble
-
-Ansible will be used to set up the environments for each remote vm, So this means installing and configuring docker, docker-compose, adding required users and configuring access for Jenkins on the Manager node and Worker node, Setting up Jenkins VM auto generating access and SSH keys, Ansible was also used to setup the Nginx Reverse Proxy server (VM) copy my configured nginx config to the remote host and resart the server allowing me to load balance all my services through an Nginx server thus decreasing redundancy.
 
 <a name="riskbacklog"></a>
 ## Risk Assessment and Product Backlog
@@ -246,29 +242,25 @@ Below is an image of the swarm running on both the manager and the worker nodes.
 
 ![Running Swarm](/Images/swarmrunning.jpg)
 
-
-
-## How the process looks
-
-Here is the actual test and building process taking place.
-
-![Jenkins Coverage Report](/images/automation.jpg)
-
-<a name="visrep"></a>
-## Visual Representation of App
-
-
 <a name="techused"></a>
 ### List of Technologies Used
 
 * MySQL for Application Database
 * Python - Coding in Flask
-* Flask - Framework 
+* Flask - Framework
+* Nginx
+* Ansible
 * Jenkins - CI Server
 * Docker / Docker Swarm
-* [Github Project](https://github.com/code-wizard91/Performance-Motors) - Version Control System
-* [Trello Board](https://trello.com/b/5RcaZXRp) - Project Tracking Board
+* [Github Project](https://github.com/code-wizard91/insult-generator) - Version Control System
+* Trello Board
 * Azure Services (MySQL Azure DB, Azure VM)
+
+<a name="visrep"></a>
+## Visual Representation of App
+
+
+
 
 <a name="eval"></a>
 ## Retrospect
