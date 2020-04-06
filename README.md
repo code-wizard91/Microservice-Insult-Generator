@@ -43,7 +43,7 @@ trigger
 <a name="mysolution"></a>
 ### Solution
 
-I decided to create a Random Insult & Joke Generator with a Microservice architecture, My application will have 5 services not including Jenkins, Managed MYSQL db, Nginx server, Ansible Server.
+I decided to create a Random Insult & Joke Generator with a Microservice architecture, My application will have 5 services not including Jenkins, Managed MYSQL db, Nginx server, Ansible Server and Docker Swarm
 
 - Service 1 of my project is essentially the front-end where the insult that is gemerated will be shown to the user.
 - Service 2 and 3 will be services that generate the random insult.
