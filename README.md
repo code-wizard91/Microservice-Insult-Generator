@@ -41,7 +41,11 @@ trigger
 
 ### Service #1
 
-The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database.
+The core service – this will render the Jinja2 templates to interact with your application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database. Each service is its own Flask Application and has its own directory and files (See Below)
+
+![Files and folders](/Images/structure1.jpg)
+![Front end structure](/Images/structure3.jpg)
+
 
 ### Service #2 and #3
 
@@ -145,6 +149,11 @@ Environment Variables were stored inside the Jenkins CI server as global variabl
 
 ![Jenkinsfile](/Images/jenk.jpg)
 
+Below is an image snippet of the build process running after being triggered by a Git Commit
+
+![Jenkinsfile](/Images/jenkrunning.jpg)
+
+
 <a name="ans"></a>
 ## Ansible Software Provisioning and Config Management
 
@@ -174,11 +183,19 @@ The Playbook File has services and tasks that Ansible needs to perform on each h
 
 ![Ansible roles](/Images/ansible3.jpg)
 
+Here is an image of Ansible running its Plays.
+
+![Ansible running](/Images/ansrunning.jpg)
+
 
 <a name="dswarm"></a>
 ## Docker-Swarm
 
 To split my app into micro-services I created Docker Images of each service and uploaded each version to Dockerhub, this enables me to switch versions very easily, I used each of these images in the compose file below, I then used these images and Docker-Compose to create a Docker Swarm of containers to increase my apps resiliance and reduce down-time and possible redundancies. 
+
+Below is an image of a Dockerfile I used to create my images.
+![Dockerfile](/Images/structure2.jpg)
+
 
 In the compose file I defined how many replicas of the service I want running in the Swarm
 
@@ -187,7 +204,6 @@ In the compose file I defined how many replicas of the service I want running in
 Below is an image of the swarm running on both the manager and the worker nodes.
 
 ![Running Swarm](/Images/swarmrunning.jpg)
-
 
 
 
