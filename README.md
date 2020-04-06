@@ -133,8 +133,15 @@ webhooks with Jenkins FINISH THIS HERE
 <a name="ci"></a>
 ## Jenkins CI Server
 
-Jenkins was used to securely ssh into the deployment VM's which are running the Docker Swarm Manger node and the worker node to deploy the app and set key environment variables, I created a Jenkinsfile to define the deployment pipeline which is on my github repository,
-Ansible was used to setup the CI server thus automating the entire process. See below for a more in-depth look. Environment Variables were stored inside the Jenkins CI server as global variables so I could then reference them within my Jenkinsfile
+Jenkins was used to securely ssh into the deployment VM's which are running the Docker Swarm Manger node and the worker node to deploy the app and set key environment variables.
+
+I created a Jenkinsfile to define each stage of the deployment, this file is read by the Jenkins server and used to deploy the app.
+
+Ansible was used to setup the Jenkins CI server thus automating the entire process. 
+
+The version of the app can be changed from v1 to v2 using the SERVICE_VERSION variable and this will change how the application works. 
+
+Environment Variables were stored inside the Jenkins CI server as global variables so I could then reference them within my Jenkinsfile. See below for a more in-depth look.
 
 ![Jenkinsfile](/Images/jenk.jpg)
 
@@ -171,10 +178,11 @@ The Playbook File has services and tasks that Ansible needs to perform on each h
 <a name="dswarm"></a>
 ## Docker-Swarm
 
-To split my app into micro-services I created docker
+To split my app into micro-services I created Docker Images of each service and uploaded each version to Dockerhub, this enables me to switch versions very easily, I used each of these images in the compose file below, I then used these images and Docker-Compose to create a Docker Swarm of containers to increase my apps resiliance and reduce down-time and possible redundancies. 
 
-![Ansible roles](/Images/dockercompose.jpg)
+In the compose file I defined how many replicas of the service I want running.
 
+![Docker Compose](/Images/dockercompose.jpg)
 
 ## How the process looks
 
