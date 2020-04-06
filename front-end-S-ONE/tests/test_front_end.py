@@ -5,11 +5,11 @@ from flask import abort, url_for
 from flask_testing import TestCase
 
 url = "http://51.132.11.147/"
-url2 = "http://51.132.11.147/insultsentance"
-url3 = "http://51.132.11.147/insultword"
-url4 = "http://51.132.11.147/insultjoiner"
-url5 = "http://51.132.11.147/frontend"
-url6 = "http://51.132.11.147/meme"
+url2 = "http://52.151.100.171:5000/insultsentance"
+url3 = "http://52.151.100.171:5000/insultword"
+url4 = "http://52.151.101.47:5000/insultjoiner"
+url5 = "http://52.151.101.47:5000/frontend"
+url6 = "http://52.151.101.47:5000/meme"
 
 def test_urlhome():
     response = requests.get(url)
