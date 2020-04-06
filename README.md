@@ -241,7 +241,10 @@ In the compose file I defined how many replicas of the service I want running in
 
 ![Docker Compose](/Images/dockercompose.jpg)
 
+### Testing Pytest
+Heres the coverage report Generated
 
+![test](/Images/test.jpg)
 
 <a name="techused"></a>
 ### List of Technologies Used
@@ -250,6 +253,7 @@ In the compose file I defined how many replicas of the service I want running in
 * Python - Coding in Flask
 * Flask - Framework
 * Nginx
+* Pytest
 * Ansible
 * Jenkins - CI Server
 * Docker / Docker Swarm
