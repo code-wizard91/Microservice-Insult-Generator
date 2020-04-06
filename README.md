@@ -245,9 +245,11 @@ In the compose file I defined how many replicas of the service I want running in
 
 <a name="test"></a>
 ### Testing Pytest
-Heres the coverage report Generated
+Heres the coverage report Generated and the testing file, Note: I only tested my Front-End Service as my other services had all their ports closed, after a lot off errors and hours I decided to run simpler requests tests.
 
 ![test](/Images/test.jpg)
+
+![test](/Images/test1.jpg)
 
 <a name="techused"></a>
 ### List of Technologies Used
