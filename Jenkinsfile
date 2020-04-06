@@ -6,7 +6,21 @@ pipeline{
 	}
 	
 	stages{
-		
+	     
+	     stage('Testing'){
+                steps{
+		    
+	            sh label: '', script: '''
+                        sshpass -p ${vmpass} ssh -o StrictHostKeyChecking=no ${vmuser}<<eof
+			pwd 
+                        cd insulttest/insult-generator
+			pytest --cov=.
+			
+			
+		'''
+                }
+            } 	
+	    
 	     stage('Set Env variables on worker node'){
                 steps{
 		    
