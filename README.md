@@ -16,6 +16,8 @@
    * [Ansible Server](#ans)
    * [Docker Swarm](#dswarm)
    * [What I used](#techused)
+   
+[Installation Guide](#install)
 
 [Testing Pytest](#test)
 
@@ -277,6 +279,9 @@ Heres the test running before deployment on Jenkins
 * [Github Project](https://github.com/code-wizard91/insult-generator) - Version Control System
 * Trello Board
 * Azure Services (MySQL Azure DB, Azure VM)
+
+<a name="install"></a>
+### Installation and how to use
 
 <a name="visrep"></a>
 ## Visual Representation of App
