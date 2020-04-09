@@ -2,7 +2,7 @@ pipeline{
 
         agent any
         environment {
-	    SERVICE_VERSION='v2'
+	    SERVICE_VERSION='v1'
 	}
 	
 	stages{
