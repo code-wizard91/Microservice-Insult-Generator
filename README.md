@@ -2,6 +2,7 @@
 [Brief](#brief)
    * [My Solution](#mysolution)
    * [Services](#myservices)
+   * [Pipeline Video](#video)
    
 [Risk Assessment and Product Backlog](#riskbacklog)
    * [Risk Assessment](#spr1)
@@ -115,6 +116,11 @@ Below is service 5 it generates request using an external API
 
 ![s5](/Images/service5.jpg)
 
+
+<a name="video"></a>
+## How the pipeline works
+
+[![pipeline_video](/Images/video.jpg)](https://www.youtube.com/watch?v=NSVz_CL5YAo)
 
 <a name="riskbacklog"></a>
 ## Risk Assessment and Product Backlog
