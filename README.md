@@ -120,7 +120,7 @@ Below is service 5 it generates request using an external API
 <a name="video"></a>
 ## How the pipeline works
 
-[![pipeline_video](/Images/video.jpg)](https://www.youtube.com/watch?v=NSVz_CL5YAo)
+[![pipeline_video](/Images/video.JPG)](https://www.youtube.com/watch?v=NSVz_CL5YAo)
 
 <a name="riskbacklog"></a>
 ## Risk Assessment and Product Backlog
