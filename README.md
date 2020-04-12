@@ -90,7 +90,7 @@ Below is service 5 it generates request using an external API
 
 
 <a name="video"></a>
-## How the pipeline works
+## How the pipeline works (Click for video)
 
 [![pipeline_video](/Images/video.JPG)](https://www.youtube.com/watch?v=NSVz_CL5YAo)
 
