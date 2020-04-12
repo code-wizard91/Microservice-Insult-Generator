@@ -200,13 +200,11 @@ The docker directory contains the inventory file which holds all the VM IP's tha
 
 For the inventory file I created host groups depending on the task that they perform, this makes it easier to reference in the Playbook file, each section has the VM Ip's that Ansible will access and variables Ansible will use when accessing a remote host.
 
-![Ansible roles](/Images/ansible4.jpg)
 
 ## Playbook file
 
 The Playbook File has services and tasks that Ansible needs to perform on each host. Below you can see how I reference the Roles I created before, ansible will run each role in the remote host. 
 
-![Ansible roles](/Images/ansible3.jpg)
 
 Here is an image of Ansible running its Plays.
 
