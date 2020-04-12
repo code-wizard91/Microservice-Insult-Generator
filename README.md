@@ -67,46 +67,18 @@ I decided to create a Random Insult & Joke Generator with a Microservice archite
 
 The core service – this will render the Jinja2 templates to interact with the application, it will also be responsible for communicating with the other services, and finally for persisting some data in an SQL database. Each service is its own Flask Application and has its own directory and files (See Below)
 
-![Files and folders](/Images/structure1.jpg)
-![Front end structure](/Images/structure3.jpg)
-
-Here is how the front end looks when recieving requests from other services.
-
-![f-look](/Images/service1.jpg)
 
 ### Service #2 and #3
 
 These will both generate a random “Object”. The first object generated is a random beggining of a insulting sentance, the second object
-is a randomly generated insult
-
-Below is the V1 version of service 2
-
-![s2](/Images/service2.jpg)
-
-Below is the alternate v2 version of service 2
-
-![s2v2](/Images/service2v2.jpg)
-
-Below is the V1 version of service 3
-
-![s3](/Images/service3.jpg)
-
-Below is the alternate v2 version of service 3
-
-![s3v2](/Images/service3v2.jpg)
+is a randomly generated insult. There are 2 versions of these services which give the user compliments instead of insults.
 
 
 ### Service #4
 
 This service will also create an “Object” using what is generated from service 2 and 3. Essentially this service brings together the responses from service 2 and 3.
 
-Below is the V1 version of service 4
-
-![s4](/Images/service4.jpg)
-
-Below is the alternate v2 version of service 4
-
-![s4v2](/Images/service4v2.jpg)
+The second version off this service shows the user a surprise brain teaser depending on the length of the randomly generated sentance.
 
 ### Service #5
 
