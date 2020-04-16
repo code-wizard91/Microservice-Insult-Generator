@@ -10,10 +10,10 @@ services:
       replicas: 2
     container_name: frontend
     build: front-end-S-ONE/
-    environment:
-    - DATABASE_URI=${DATABASE_URI}
-    - SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
-    - SECRET_KEY=${SECRET_KEY}
+    #environment:
+    #- DATABASE_URI=${DATABASE_URI}
+    #- SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
+    #- SECRET_KEY=${SECRET_KEY}
 
   insultservicetwo:
     image: alimizan/insultservicetwo:${SERVICE_VERSION}
