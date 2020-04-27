@@ -254,6 +254,10 @@ Heres the test running before deployment on Jenkins
 <a name="install"></a>
 ### Installation and how to use
 
+- Install Doccker and Docker-Compose
+- Clone Directory
+- run "docker-compose up -d"
+
 <a name="visrep"></a>
 ## Visual Representation of App
 
