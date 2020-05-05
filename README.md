@@ -256,6 +256,7 @@ Heres the test running before deployment on Jenkins
 
 - Install Doccker and Docker-Compose
 - Clone Directory
+- set the service version by running "export SERVICE_VERSION=v1"
 - run "docker-compose up -d"
 
 <a name="visrep"></a>
